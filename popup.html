@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozon Competitive Position Export</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            padding: 15px;
+            min-width: 290px;
+            border-radius: 30px;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+        }
+        .export-text {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 100%;
+        }
+        .invisible {
+            visibility: hidden;
+        }
+        .visible {
+            visibility: visible;
+        }
+        .link-custom {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .link-custom:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="container rounded-3">
+    <h4 class="text-center mb-4 rounded">Ozon Competitive Position Export</h4>
+    <a class="link-custom d-block text-center mb-4" href="https://seller.ozon.ru/app/analytics/what-to-sell/competitive-position" target="_blank">Link to Ozon Analytics</a>
+    <div class="d-flex justify-content-center mb-2">
+        <button id="exportButton" class="btn btn-custom mb-2 rounded-pill">Export Competitive Table</button>
+    </div>
+    <div id="exportTextContainer" class="export-text invisible"></div>
+    <div class="d-flex justify-content-center mb-2">
+        <button id="copyButton" class="btn btn-primary d-none mb-2 rounded-pill">Copy to Clipboard</button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

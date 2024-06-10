@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Ozon Competitive Position Export",
+  "version": "1.0",
+  "description": "Export competitive table preview from https://seller.ozon.ru/app/analytics/what-to-sell/competitive-position into clipboard by click",
+  "action": {
+    "default_icon": "app-icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Export Competitive Table"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "clipboardWrite"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "48": "app-icon.png",
+    "128": "app-icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
